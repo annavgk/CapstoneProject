@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    public Dialogue dialogue;
+
     public virtual void Interact()
     {
-        // This is where you define what happens when the player interacts with the object
-        Debug.Log("Interacted with " + gameObject.name);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }

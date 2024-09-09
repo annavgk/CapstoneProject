@@ -13,27 +13,29 @@ public class DialogueManager : MonoBehaviour
     private bool isTyping;
     private string currentSentence;
 
-    // Use this for initialization
+    public bool dialogueActive { get; private set; } 
+
+    private float typingSpeed = 0.05f;
+
     void Start()
     {
         sentences = new Queue<string>();
         isTyping = false;
+        dialogueActive = false; 
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && dialogueActive)
         {
             if (isTyping)
             {
-                // If typing is still in progress, display the full sentence
                 StopAllCoroutines();
                 dialogueText.text = currentSentence;
                 isTyping = false;
             }
             else
             {
-                // If typing is complete, go to the next sentence
                 DisplayNextSentence();
             }
         }
@@ -42,10 +44,12 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
+        dialogueActive = true; 
 
         nameText.text = dialogue.name;
 
         sentences.Clear();
+        typingSpeed = dialogue.typingSpeed;
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -82,7 +86,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(typingSpeed);
         }
 
         isTyping = false;
@@ -91,5 +95,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        dialogueActive = false; 
     }
 }

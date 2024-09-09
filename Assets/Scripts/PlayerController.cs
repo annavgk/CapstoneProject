@@ -11,24 +11,27 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Interactable currentInteractable;
 
+    private DialogueManager dialogueManager;
+
+    void Start()
+    {
+        dialogueManager = FindObjectOfType<DialogueManager>();
+    }
+
     void Update()
     {
-        // Handle input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        // Normalize movement to maintain consistent speed
         movement = movement.normalized;
 
-        // Flip the character sprite based on movement direction
         if (movement.x != 0)
         {
-            float localScaleX = Mathf.Sign(movement.x) * 5f;  // Maintain scale at 5, flip based on direction
-            transform.localScale = new Vector3(localScaleX, 5f, 1f);  // Ensure the y and z scales stay the same
+            float localScaleX = Mathf.Sign(movement.x) * 5f;  
+            transform.localScale = new Vector3(localScaleX, 5f, 1f); 
         }
 
-        // Handle interaction
-        if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null)
+        if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null && !dialogueManager.dialogueActive)
         {
             currentInteractable.Interact();
         }
@@ -36,13 +39,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Handle movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Check if the collided object is interactable
         Interactable interactable = collision.GetComponent<Interactable>();
         if (interactable != null)
         {
@@ -52,7 +53,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // Clear the current interactable when exiting its range
         if (collision.GetComponent<Interactable>() == currentInteractable)
         {
             currentInteractable = null;
