@@ -23,7 +23,8 @@ public class PlayerController : MonoBehaviour
         // Flip the character sprite based on movement direction
         if (movement.x != 0)
         {
-            transform.localScale = new Vector3(Mathf.Sign(movement.x), 1f, 1f);
+            float localScaleX = Mathf.Sign(movement.x) * 5f;  // Maintain scale at 5, flip based on direction
+            transform.localScale = new Vector3(localScaleX, 5f, 1f);  // Ensure the y and z scales stay the same
         }
 
         // Handle interaction

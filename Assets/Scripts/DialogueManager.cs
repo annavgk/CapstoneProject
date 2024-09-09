@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour
@@ -12,12 +11,32 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
     private bool isTyping;
+    private string currentSentence;
 
     // Use this for initialization
     void Start()
     {
         sentences = new Queue<string>();
         isTyping = false;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isTyping)
+            {
+                // If typing is still in progress, display the full sentence
+                StopAllCoroutines();
+                dialogueText.text = currentSentence;
+                isTyping = false;
+            }
+            else
+            {
+                // If typing is complete, go to the next sentence
+                DisplayNextSentence();
+            }
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -38,7 +57,6 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        // Prevent showing the next sentence until the current one has finished typing
         if (isTyping)
         {
             return;
@@ -50,15 +68,16 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        currentSentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(currentSentence));
     }
 
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
         isTyping = true;
+        currentSentence = sentence;
 
         foreach (char letter in sentence.ToCharArray())
         {
@@ -66,7 +85,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
-        isTyping = false;  // Typing is done, allow the next sentence to be displayed
+        isTyping = false;
     }
 
     void EndDialogue()
