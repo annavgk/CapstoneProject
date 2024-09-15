@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public Dialogue dialogue;
-
     public virtual void Interact()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        // This function will be overridden in derived classes
     }
 }

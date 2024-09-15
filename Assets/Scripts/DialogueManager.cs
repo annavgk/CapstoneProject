@@ -92,9 +92,15 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-        dialogueActive = false; 
+        dialogueActive = false;
+
+        FindObjectOfType<PlayerController>().lienReadyToFollow = true;
+
+        FindObjectOfType<LienInteractable>().OnDialogueEnd();
     }
+
+
 }
