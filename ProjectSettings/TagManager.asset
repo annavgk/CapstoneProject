@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Lien
+  - grid
+  - collisionTilemap
+  - groundTilemap
+  - decoration1Tilemap
+  - decoration2Tilemap
+  - frontTilemap
+  - roomTilemap
   layers:
   - Default
   - TransparentFX
@@ -12,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Wall
   - 
   - Player
   - Lien
@@ -41,4 +48,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 3982974995
+    locked: 0
+  - name: GroundDecoration1
+    uniqueID: 2735203333
+    locked: 0
+  - name: GroundDecoration2
+    uniqueID: 4151304013
+    locked: 0
+  - name: Front
+    uniqueID: 1526224323
+    locked: 0
+  - name: Collision
+    uniqueID: 368720787
     locked: 0
