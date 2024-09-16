@@ -100,10 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdd6359b02a1ac47866d97079cec9c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: 
-    sentences: []
-    typingSpeed: 0.02
 --- !u!61 &54637895708614068
 BoxCollider2D:
   m_ObjectHideFlags: 0

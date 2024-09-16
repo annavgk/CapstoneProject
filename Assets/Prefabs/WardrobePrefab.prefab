@@ -100,11 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdd6359b02a1ac47866d97079cec9c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: 
-    sentences:
-    - Your clothes are here
-    typingSpeed: 0.02
 --- !u!61 &54637895708614068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,7 +143,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 0.3}
+  m_Size: {x: 1.2, y: 0.3}
   m_EdgeRadius: 0
 --- !u!61 &6508233724108205563
 BoxCollider2D:
@@ -193,7 +188,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.5}
+  m_Size: {x: 1.3, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &1772963679026018952
 Rigidbody2D:

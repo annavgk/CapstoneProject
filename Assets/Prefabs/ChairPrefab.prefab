@@ -100,11 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdd6359b02a1ac47866d97079cec9c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: 
-    sentences:
-    - A not so comfy chair, but it's better than nothing
-    typingSpeed: 0.02
 --- !u!61 &8277498740867131935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,7 +143,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.32}
+  m_Size: {x: 0.15, y: 0.15}
   m_EdgeRadius: 0
 --- !u!61 &5439589293900820454
 BoxCollider2D:
@@ -193,7 +188,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.45, y: 0.32}
+  m_Size: {x: 0.25, y: 0.3}
   m_EdgeRadius: 0
 --- !u!50 &1102398456738975487
 Rigidbody2D:
