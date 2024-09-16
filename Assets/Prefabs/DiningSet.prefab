@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9171221386819928795}
   - component: {fileID: 3921697977045533588}
-  - component: {fileID: 7240651089455175074}
   - component: {fileID: 6229717773231743993}
   - component: {fileID: 2634310740092365690}
   - component: {fileID: 5900522987596684628}
+  - component: {fileID: 860143099225512360}
   m_Layer: 0
   m_Name: DiningSet
   m_TagString: Untagged
@@ -88,18 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7240651089455175074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893546776171245673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cdd6359b02a1ac47866d97079cec9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &6229717773231743993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,3 +205,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &860143099225512360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893546776171245673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9088afab47f155941a138ee895d4bc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
+    typingSpeed: 0.05

@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1276994193679519648}
   - component: {fileID: 6704441189884106702}
-  - component: {fileID: 5281920886252178888}
   - component: {fileID: 8277498740867131935}
   - component: {fileID: 5439589293900820454}
   - component: {fileID: 1102398456738975487}
+  - component: {fileID: -3957671221729405504}
   m_Layer: 0
   m_Name: ChairPrefab
   m_TagString: Untagged
@@ -88,18 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5281920886252178888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5603554831731925218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cdd6359b02a1ac47866d97079cec9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &8277498740867131935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,3 +205,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-3957671221729405504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5603554831731925218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9088afab47f155941a138ee895d4bc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
+    typingSpeed: 0.05
