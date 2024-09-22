@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6119860528019696436}
   - component: {fileID: 2411272070132280223}
-  - component: {fileID: 4152872267633196696}
   - component: {fileID: 54637895708614068}
   - component: {fileID: 6508233724108205563}
   - component: {fileID: 1772963679026018952}
+  - component: {fileID: 8124059281210206838}
   m_Layer: 0
   m_Name: WardrobePrefab
   m_TagString: Untagged
@@ -88,18 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4152872267633196696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3303506327923539177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cdd6359b02a1ac47866d97079cec9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &54637895708614068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,3 +205,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8124059281210206838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303506327923539177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9088afab47f155941a138ee895d4bc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - All your clothes are here
+    typingSpeed: 0.05

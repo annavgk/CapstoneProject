@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2674956052568572248}
   - component: {fileID: 5247814442584373835}
   - component: {fileID: 3347788326314034281}
-  - component: {fileID: 214586359908747934}
+  - component: {fileID: 113610060180689736}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -133,7 +133,11 @@ MonoBehaviour:
   canUnderstandRats: 0
   lienInParty: 0
   lienReadyToFollow: 0
+<<<<<<< HEAD
 --- !u!60 &214586359908747934
+=======
+--- !u!60 &113610060180689736
+>>>>>>> origin/main
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,6 +181,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
+<<<<<<< HEAD
     - - {x: 0.31260386, y: -0.5629898}
       - {x: 0.4979358, y: -0.56336623}
       - {x: 0.4980771, y: -0.50239396}
@@ -201,4 +206,16 @@ PolygonCollider2D:
       - {x: 0.43605056, y: -0.9982649}
       - {x: 0.43599275, y: -0.8751117}
       - {x: 0.31225774, y: -0.81062686}
+=======
+    - - {x: 0.18549368, y: 0.015963716}
+      - {x: 0.18764913, y: 0.06641358}
+      - {x: -0.16992861, y: 0.06641357}
+      - {x: -0.17056939, y: 0.015274227}
+      - {x: -0.122388884, y: -0.04999149}
+      - {x: -0.14788693, y: -0.103658}
+      - {x: -0.117332175, y: -0.13479154}
+      - {x: 0.13309252, y: -0.13604692}
+      - {x: 0.16001625, y: -0.100335345}
+      - {x: 0.13784356, y: -0.049425848}
+>>>>>>> origin/main
   m_UseDelaunayMesh: 0

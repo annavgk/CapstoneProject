@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 528755034166141789}
   - component: {fileID: 468558773507447157}
-  - component: {fileID: -1471958700957806098}
   - component: {fileID: -3110643949645769229}
   - component: {fileID: 5639202407903843900}
   - component: {fileID: 1366410304248365619}
+  - component: {fileID: 4000692613411202459}
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
@@ -88,18 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1471958700957806098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639441536553827963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cdd6359b02a1ac47866d97079cec9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &-3110643949645769229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,3 +205,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4000692613411202459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639441536553827963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9088afab47f155941a138ee895d4bc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
+    typingSpeed: 0.05
