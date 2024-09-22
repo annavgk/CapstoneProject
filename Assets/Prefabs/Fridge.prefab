@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8211187507633369401}
   - component: {fileID: 4353378962976119057}
-  - component: {fileID: 8690380581424640556}
   - component: {fileID: 4244042435879847467}
   - component: {fileID: 6164765203825139647}
   - component: {fileID: 3559990268972666435}
+  - component: {fileID: -7938990469476509713}
   m_Layer: 0
   m_Name: Fridge
   m_TagString: Untagged
@@ -88,18 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8690380581424640556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9001013430061738572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cdd6359b02a1ac47866d97079cec9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &4244042435879847467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,3 +205,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7938990469476509713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001013430061738572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9088afab47f155941a138ee895d4bc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
+    typingSpeed: 0.05
