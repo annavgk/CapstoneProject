@@ -12,11 +12,12 @@ TagManager:
   - decoration2Tilemap
   - frontTilemap
   - roomTilemap
+  - Pushable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Pushable
   - Water
   - UI
   - Wall

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public float interactionRange = 1f;
     public float playerScale = 5f;
+    public LayerMask pushableLayer;
 
     private Vector2 movement;
     private Interactable currentInteractable;
@@ -16,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public bool canUnderstandRats = false;
     public bool lienInParty = false;
     public bool lienReadyToFollow = false;
+
+    private bool isPushing = false;
 
     void Start()
     {
@@ -42,7 +45,31 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if (!isPushing)
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
+
+        if (movement != Vector2.zero && !isPushing)
+        {
+            AttemptPush();
+        }
+    }
+
+    void AttemptPush()
+    {
+        Vector2 checkDirection = new Vector2(movement.x, movement.y);
+        RaycastHit2D hit = Physics2D.Raycast(rb.position, checkDirection, 1f, pushableLayer);
+
+        if (hit.collider != null)
+        {
+            PushableObject pushable = hit.collider.GetComponent<PushableObject>();
+            if (pushable != null)
+            {
+                isPushing = true;
+                pushable.Push(checkDirection, () => isPushing = false);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
