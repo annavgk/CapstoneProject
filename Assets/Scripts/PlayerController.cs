@@ -4,31 +4,32 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 5f; //this is not how you label public variables.
     public Rigidbody2D rb;
-    public float interactionRange = 1f;
-    public float playerScale = 5f;
+    public float interactionRange = 1f;//
+    public float playerScale = 5f;//
     public LayerMask pushableLayer;
 
     private Vector2 movement;
     private Interactable currentInteractable;
     private DialogueManager dialogueManager;
 
-    public bool canUnderstandRats = false;
-    public bool lienInParty = false;
-    public bool lienReadyToFollow = false;
+    public bool canUnderstandRats = false; //
+    public bool lienInParty = false;//
+    public bool lienReadyToFollow = false;//
 
     private bool isPushing = false;
 
     void Start()
     {
-        dialogueManager = FindObjectOfType<DialogueManager>();
+        dialogueManager = FindObjectOfType<DialogueManager>();//managers should be singletons. Where can you get a wonderful, beautiful, free Singleton class? 
+        //In any code project sent to you.
     }
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");//do not use the old input system
+        movement.y = Input.GetAxisRaw("Vertical"); //use the new one
         movement = movement.normalized;
 
         if (movement.x != 0)

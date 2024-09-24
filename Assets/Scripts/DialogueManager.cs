@@ -5,7 +5,7 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI nameText;//no more assigning things publicly. This essentially gives everything access.
     public TextMeshProUGUI dialogueText;
     public Animator animator;
 
@@ -26,7 +26,15 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && dialogueActive)
+        //we never want to have our Input.GetKeyDown inside of a function like this.
+        //why is that?
+        //1. Will activate when game is paused
+        //2. Wtf is KeyCode.Space? This means you are locked to the spacebar, and if you want to change buttons, you then need to change code
+        //It should only be a button that is pressed.
+        //3. If you Input commands all throughout your code, you create spaghetti you then need to keep track of (how many places have Input.GetKeyDown?)
+        //4. It does not use the new input system.
+        
+        if (Input.GetKeyDown(KeyCode.Space) && dialogueActive) 
         {
             if (isTyping)
             {

@@ -13,7 +13,7 @@ public class TriggerPadlock : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) //no more comparing tags. Use GetComponent. Remembering tags is an exercise in frustration.
         {
             padlockPuzzle.EnablePadlock();
         }

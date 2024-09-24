@@ -26,7 +26,7 @@ public class LienController : MonoBehaviour
 
     void Update()
     {
-        if (playerController.lienInParty && !lienCollidingWithPlayer && !isWaiting)
+        if (playerController.lienInParty && !lienCollidingWithPlayer && !isWaiting) //we now have three things to check...what if we have 12 things? This is why we use states in our code
         {
             FollowPlayer();
         }
